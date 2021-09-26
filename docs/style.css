@@ -1,0 +1,122 @@
+/* Ultra lOl css codes, don't read them */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap');
+
+body {
+	background-color: hsl(231, 15%, 18%);
+}
+
+.title {
+	font-size: 2em;
+    color: hsl(0, 94%, 66%);
+	text-align: center;
+	font-family: monospace;
+}
+.title p{
+	color: hsl(0, 22%, 96%);
+	font-size: 1em;
+}
+
+.supported_oses {
+	margin-top: 2em;
+	font-size: 2em;
+    color: hsl(0, 94%, 66%);
+	text-align: center;
+	font-family: monospace;
+
+}
+.supported_oses li{
+	text-align: left;
+	font-size: 0.9em;
+	color: hsl(0, 22%, 96%);;
+}
+.supported_oses p{
+	margin-top: 0.8em;
+	text-align: left;
+	font-size: 0.9em;
+	color: hsl(0, 22%, 96%);;
+}
+.supported_oses a{
+	color: hsl(0, 22%, 96%);;
+}
+.supported_oses a:hover{
+	color: hsl(0, 11%, 86%);;
+}
+
+.dl_head {
+	margin-top: 3em;
+	font-size: 2em;
+    color: hsl(0, 94%, 66%);
+	text-align: center;
+	font-family: monospace;
+}
+/* Download button credits goes to ---> https://codepen.io/nw/pen/udkIB */
+.download_btn {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+	background-color: hsl(0, 79%, 63%);
+	color: white;
+	font-family: 'Comic Neue', cursive;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+}
+.download_btn:hover {
+	background-color: hsl(234, 14%, 14%);
+	color: white;
+}
+.download_btn:before, .download_btn:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+.download_btn:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+.download_btn:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+.download_btn:hover:before {
+	border-color: hsl(0, 79%, 63%);
+}
+.download_btn:hover:after {
+	border-top-color: hsl(0, 79%, 63%);
+	animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
