@@ -2,6 +2,9 @@
 
 pascal_code="./*.pas"
 
+_add_doskey() {
+    doskey fpc=FPC.exe
+}
 
 _compile() {
     for eachfile in $pascal_code
@@ -26,6 +29,7 @@ _rm_compiled_files() {
 
 _main(){
     printf "\n Copyright (c) 2021 Itz-fork \n\n"
+    _add_doskey
     echo "----> Compiling Your Pascal Program(s)"
     _compile &> /dev/null
     echo "----> Running Your Pascal Program(s)"
