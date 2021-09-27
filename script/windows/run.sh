@@ -9,22 +9,20 @@ _add_doskey() {
 _compile() {
     for eachfile in $pascal_code
     do
-        file_name=${eachfile//[.pas]/""}
         fpc "$eachfile"
-        "./$file_name"
     done
 }
 
 _run() {
+    file_name=${eachfile/.pas/""}
     printf "Output: \n\n"
     "./$file_name"
     printf "\n"
 }
 
 _rm_compiled_files() {
-    r_fn=${eachfile/.pas/""}
-    del /f "$r_fn" || rm "$r_fn"
-    del /f "$r_fn.o" || rm "$r_fn.o"
+    del /f "$file_name" || rm "$file_name"
+    del /f "$file_name.o" || rm "$file_name.o"
 }
 
 _main(){
